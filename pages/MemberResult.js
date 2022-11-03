@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
-import database from '@react-native-firebase/database';
+/*import database from '@react-native-firebase/database';
 //import { initializeApp } from "@firebase/app";
 //import { getDatabase, ref, set } from "@firebase/database";
 
@@ -19,6 +19,15 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 //const database = getDatabase(app);
 
+function writeUserData(animalSpecies, animalAge, dateTime, deceased) {
+    const db = getDatabase(app);
+    set(ref(db, 'animals/' + animalSpecies), {
+      age: animalAge,
+      date: dateTime,
+      death : deceased
+    });
+  }*/
+
 function MemberResult({route}) {
   const {animal} = route.params;
 
@@ -33,14 +42,7 @@ function MemberResult({route}) {
   );
 }
 
-function writeUserData(animalSpecies, animalAge, dateTime, deceased) {
-    const db = getDatabase(app);
-    set(ref(db, 'animals/' + animalSpecies), {
-      age: animalAge,
-      date: dateTime,
-      death : deceased
-    });
-  }
+
 
 const styles = StyleSheet.create({
   label: {
@@ -56,5 +58,5 @@ const styles = StyleSheet.create({
   },
 });
 
-//export default MemberResult;
-export default writeUserData;
+export default MemberResult;
+//export default writeUserData;
