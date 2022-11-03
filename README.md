@@ -1,6 +1,6 @@
 # Soft_Eng_Proj
 
-Two separate apps within:
+Two separate 'apps' within:
 
 screens folder with the corresponding(top) app.js code prompt for login and successfully post to firebase database
 
