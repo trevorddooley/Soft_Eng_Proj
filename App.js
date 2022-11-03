@@ -37,7 +37,7 @@ function App() {
         <Stack.Screen
           name="WelcomeScreen"
           component={Welcome}
-          // options={{headerShown: false}} //Sayfanın ustunde cıkan Başlığımızı gizledik.
+          // options={{headerShown: false}}
         />
         <Stack.Screen name="MemberSignScreen" component={MemberSign} />
         <Stack.Screen name="MemberResultScreen" component={MemberResult} />
