@@ -3,30 +3,35 @@ import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { auth } from '../firebase'
 
+
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const navigation = useNavigation()
 
-  useEffect(() => {
+  /*useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
-        navigation.replace("Home")
+        navigation.replace("WelcomeScreen")
       }
     })
 
     return unsubscribe
-  }, [])
+  }, [])*/
 
   const handleSignUp = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then(userCredentials => {
         const user = userCredentials.user;
+        if (user) {
+          navigation.replace("WelcomeScreen")
+        }
         console.log('Registered with:', user.email);
       })
       .catch(error => alert(error.message))
+
   }
 
   const handleLogin = () => {
@@ -34,6 +39,9 @@ const LoginScreen = () => {
       .signInWithEmailAndPassword(email, password)
       .then(userCredentials => {
         const user = userCredentials.user;
+        if (user) {
+          navigation.replace("WelcomeScreen")
+        }
         console.log('Logged in with:', user.email);
       })
       .catch(error => alert(error.message))
@@ -47,12 +55,14 @@ const LoginScreen = () => {
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"
+          placeholderTextColor = '#000000'
           value={email}
           onChangeText={text => setEmail(text)}
           style={styles.input}
         />
         <TextInput
           placeholder="Password"
+          placeholderTextColor = '#000000'
           value={password}
           onChangeText={text => setPassword(text)}
           style={styles.input}
