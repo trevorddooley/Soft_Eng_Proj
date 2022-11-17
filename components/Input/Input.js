@@ -7,7 +7,10 @@ function Input({label, placeholder, onChangeText}) {
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <View style={styles.input_container}>
-        <TextInput placeholder={placeholder} onChangeText={onChangeText} />
+        <TextInput
+        placeholder={placeholder} 
+        placeholderTextColor="#000000"
+        onChangeText={onChangeText} />
       </View>
     </View>
   );
