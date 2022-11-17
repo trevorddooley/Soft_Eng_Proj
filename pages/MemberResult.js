@@ -1,5 +1,6 @@
-import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet, SafeAreaView, Alert} from 'react-native';
+import Button from '../components/Button';
 /*import database from '@react-native-firebase/database';
 //import { initializeApp } from "@firebase/app";
 //import { getDatabase, ref, set } from "@firebase/database";
@@ -27,18 +28,45 @@ function writeUserData(animalSpecies, animalAge, dateTime, deceased) {
       death : deceased
     });
   }*/
+  
 
-function MemberResult({route}) {
+  function handleAgain() {
+   return;
+  }
+  function handleHome() {
+     return;
+    }
+
+function MemberResult({route}, {navigation}) {
   const {animal} = route.params;
-
+  function handleAgain() {
+    return;
+   }
+   function handleHome() {
+      return;
+     }
+     function handleNext() {
+      return;
+     }
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Text style={styles.message}>Submission Complete!</Text>
       <Text style={styles.label}>Species: {animal.animalSpecies}</Text>
       <Text style={styles.label}>Age: {animal.animalAge}</Text>
-      <Text style={styles.label}>Date and Time: {animal.dateTime}</Text>
-      <Text style={styles.label}>Deceased: {animal.deceased}</Text>
-    </SafeAreaView>
+      <Text style={styles.label}>Date: {animal.date}</Text>
+      <Text style={styles.label}>Time: {animal.time}</Text>
+      <Text style={styles.label}>Deceased?: {animal.deceased}</Text>
+      <Text style={styles.label}>Location: {animal.location}</Text>
+      <SafeAreaView>
+          <Button text="Submit Another" onPress={handleAgain} />
+      </SafeAreaView>
+      <SafeAreaView>
+          <Button text="Landing Page" onPress={handleNext} />
+      </SafeAreaView>
+      <SafeAreaView>
+          <Button text="Return Home" onPress={handleHome} />
+      </SafeAreaView>
+      </SafeAreaView>
   );
 }
 
@@ -46,15 +74,16 @@ function MemberResult({route}) {
 
 const styles = StyleSheet.create({
   label: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    margin: 5,
+    margin: 15,
   },
   message: {
     fontWeight: 'bold',
-    fontSize: 50,
+    fontSize: 30,
     textAlign: 'center',
     color: '#9fa8da',
+    margin: 30,
   },
 });
 
