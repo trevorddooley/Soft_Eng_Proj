@@ -6,7 +6,7 @@ import Button from '../components/Button';
 import { StyleSheet, Text, SafeAreaView, Dimensions  } from 'react-native';
 import MapView from 'react-native-maps';
 import DocumentPicker from 'react-native-document-picker';
-import DatePicker from 'react-native-date-picker';
+//import DatePicker from 'react-native-date-picker';
 
 const STYLES = ['default', 'dark-content', 'light-content'];
 const TRANSITIONS = ['fade', 'slide', 'none'];
