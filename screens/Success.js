@@ -1,4 +1,6 @@
-import React from 'react';
+//Redundant code
+
+/*import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 
 function Success({route}) {
@@ -29,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Success;
+export default Success;*/
