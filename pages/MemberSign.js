@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+//Redundant code -- see 'FirebaseTest'
+
+/*import React, {useState} from 'react';
 //import * as React from 'react';
 import {View, Alert, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard} from 'react-native';
 import Input from '../components/Input';
@@ -73,10 +75,10 @@ function MemberSign({navigation}) {
 
 
   function handleSubmit() {
-    /*if (!animalSpecies || !animalAge || !date || !deceased || !time || !location) {
+    if (!animalSpecies || !animalAge || !date || !deceased || !time || !location) {
       Alert.alert('Submission Failed', 'One or more fields is missing or incorrect.');
       return;
-    }*/
+    }
 
 
     const animal = {
@@ -89,7 +91,17 @@ function MemberSign({navigation}) {
     };
   
   navigation.navigate('MemberResultScreen', {animal});
+	const clearState = () => {
+		setAnimalSpecies('')
+		setAnimalAge('')
+		setDate('')
+		setDeceased('')
+		setTime('')
+		setLocation('')
+	}
+
   }
+
 
   return (
     <KeyboardAvoidingView
@@ -97,7 +109,7 @@ function MemberSign({navigation}) {
       style={{flex: 1}}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={{ flex: 1 }}>
-        {/* <Text>Member Sign</Text> */}
+        { <Text>Member Sign</Text> }
           <View style = {{flex: 1}}>
             <MapView style={styles.map}
               initialRegion={{
@@ -181,4 +193,4 @@ function MemberSign({navigation}) {
   );
 }
 
-export default MemberSign;
+export default MemberSign;*/
