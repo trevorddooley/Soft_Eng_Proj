@@ -15,7 +15,7 @@ const TRANSITIONS = ['fade', 'slide', 'none'];
 const deviceHeight = Dimensions.get("window").height;
 
 //Define constant variable being changed from input onChange
-function MemberSign({navigation}) {
+function FirebaseTest({navigation}) {
 	const [animalSpecies, setAnimalSpecies] = useState('');
 	const [animalAge, setAnimalAge] = useState('');
 	const [date, setDate] = useState('');
@@ -212,4 +212,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default MemberSign;
+export default FirebaseTest;
