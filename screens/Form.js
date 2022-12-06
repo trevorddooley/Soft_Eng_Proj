@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from 'react';
+//Redundant code
+
+/*import React, {useState, useEffect} from 'react';
 //import * as React from 'react';
 import {View, Alert} from 'react-native';
 import Input from '../components/Input';
@@ -64,7 +66,7 @@ function Form({navigation}) {
   }, []);
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      {/* <Text>Member Sign</Text> */}
+      {/* <Text>Member Sign</Text> }  <--Missing end comment
       <View style={styles.container}>
         <MapView style={styles.map} />
       </View>
@@ -91,4 +93,4 @@ function Form({navigation}) {
   );
 }
 
-export default Form;
+export default Form;*/
