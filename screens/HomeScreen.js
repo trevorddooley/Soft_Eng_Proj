@@ -1,7 +1,9 @@
-import { useNavigation } from '@react-navigation/core'
+//Redundant code
+
+/*import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { auth } from '../firebase'
+import { auth } from '../firebaseAuth'
 
 const HomeScreen = () => {
   const navigation = useNavigation()
@@ -49,4 +51,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 16,
   },
-})
+})*/
